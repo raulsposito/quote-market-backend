@@ -1,11 +1,37 @@
 class Api::V1::PostsController < ApplicationController
 
-# GET /users
+# GET /posts
   def index
     @posts = Post.all
 
     render json: @posts
   end
 
+  # Get /posts/1
+  def show
+    render json: @post 
+  end
+
+  # Post /posts
+  def create
+    post = Post.new(post_params)
+
+    if post.save
+      render json: post, status: :created, location: post
+    else
+      render json: user.errors, status: :unprocessable_entity
+    end
+  end
+
+  # Delete 
+  def destroy
+    post.destroy
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:picture, :description, :budget, :user_id)
+  end
   
 end
