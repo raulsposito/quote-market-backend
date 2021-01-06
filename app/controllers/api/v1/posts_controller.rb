@@ -1,4 +1,5 @@
 class Api::V1::PostsController < ApplicationController
+  before_action :set_post, only: [:show, :update, :destroy]
 
 # GET /posts
   def index
@@ -29,6 +30,10 @@ class Api::V1::PostsController < ApplicationController
   end
 
   private
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
 
   def post_params
     params.require(:post).permit(:picture, :description, :budget, :user_id)
