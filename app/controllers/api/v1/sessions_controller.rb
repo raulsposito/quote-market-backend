@@ -12,4 +12,21 @@ class Api::V1::SessionsController < ApplicationController
         end
     end
 
+    def get_current_user
+        if logged_in?
+            render json: UserSerializer.new(current_user)
+        else
+            render json: {
+                error: "Please Log In to continue."
+            }
+        end
+    end
+
+    def destroy
+        session.clear
+        render json: {
+          notice: "successfully logged out"
+        }, status: :ok
+    end    
+
 end
