@@ -5,4 +5,6 @@ class User < ApplicationRecord
     has_many :quotes
     
     has_many :markets, through: :quotes
+
+    validates :name, :pic_url, presence: true
 end

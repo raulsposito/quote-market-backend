@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create(name: "Raul", email: "raulsposito@gmail.com", pic_url: "https://avatars2.githubusercontent.com/u/15642008?s=460&u=6fffd7f740b3082be3f6fa0a171b1a47cf22eaeb&v=4", password_digest: "123")
-User.create(name: "Joe", email: "joe123@gmail.com", pic_url: "https://randomuser.me/api/portraits/men/41.jpg", password_digest: "123")
-User.create(name: "Mick", email: "mick123@gmail.com", pic_url: "https://randomuser.me/api/portraits/men/40.jpg", password_digest: "123")
-User.create(name: "Jess", email: "jessyj@gmail.com", pic_url: "https://randomuser.me/api/portraits/women/34.jpg", password_digest: "123")
-User.create(name: "Virginia", email: "vir@gmail.com", pic_url: "https://randomuser.me/api/portraits/women/32.jpg", password_digest: "123")
+User.create(name: "Raul", email: "raulsposito@gmail.com", pic_url: "https://avatars2.githubusercontent.com/u/15642008?s=460&u=6fffd7f740b3082be3f6fa0a171b1a47cf22eaeb&v=4", password: "123")
+User.create(name: "Joe", email: "joe123@gmail.com", pic_url: "https://randomuser.me/api/portraits/men/41.jpg", password: "123")
+User.create(name: "Mick", email: "mick123@gmail.com", pic_url: "https://randomuser.me/api/portraits/men/40.jpg", password: "123")
+User.create(name: "Jess", email: "jessyj@gmail.com", pic_url: "https://randomuser.me/api/portraits/women/34.jpg", password: "123")
+User.create(name: "Virginia", email: "vir@gmail.com", pic_url: "https://randomuser.me/api/portraits/women/32.jpg", password: "123")
 
 Market.create(name: "Dog Care")
 Market.create(name: "Gardening")
