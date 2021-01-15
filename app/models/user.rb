@@ -6,5 +6,6 @@ class User < ApplicationRecord
     
     has_many :markets, through: :quotes
 
-    validates :name, :pic_url, presence: true
+    validates :email, uniqueness: true
+    validates :name, :email, :pic_url, presence: true
 end
