@@ -15,6 +15,7 @@ class Api::V1::PostsController < ApplicationController
 
   # Post /posts
   def create
+    
     post = Post.new(post_params)
 
     if post.save
